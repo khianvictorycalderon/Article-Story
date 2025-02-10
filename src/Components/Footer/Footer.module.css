@@ -1,0 +1,96 @@
+.footer {
+    background: rgb(18, 18, 18);
+    color: rgb(193, 193, 193);
+    padding: 4rem;
+}
+
+.footer_logo {
+    width: 8%;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.main_text {
+    margin-left: 0.5rem;
+}
+
+.socmed_links {
+    display: flex;
+    flex-wrap: wrap; /* Allow links to wrap onto a new line */
+    justify-content: center; /* Center the items */
+    gap: 5rem; /* Add space between items */
+    text-align: center;
+}
+
+.socmed_image {
+    width: 3rem;
+    height: 3rem;
+    transition: 0.3s;
+}
+
+.socmed_image:hover {
+    scale: 1.2;
+}
+
+.hr {
+    border: none; /* Remove default border */
+    border-top: 1px solid #ccc; /* Light grey color for the top border */
+    height: 1px; /* Adjust the height */
+    margin: 1rem 0; /* Optional margin for spacing */
+}
+
+.misc {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+    font-size: 14pt;
+    width:80%;
+    margin: auto;
+    justify-items: center;
+    text-align: center;
+}
+
+.no_design {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.no_design:hover{ 
+    color: rgb(255, 213, 76);
+}
+
+.last_info {
+    padding-top:3.5rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem;
+    }
+    .footer_logo {
+        width: 40%;
+        height: auto;
+    }
+    .flex {
+        flex-direction: column;
+    }
+    .socmed_links {
+        padding-top: 2rem;
+        gap: 2rem; /* Add space between items */
+    }
+    .misc {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+    }
+    .last_info {
+        padding-top:1.5rem;
+    }
+}
