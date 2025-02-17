@@ -1,0 +1,125 @@
+/* Navbar */
+.navbar {
+    background: rgb(45, 45, 45);
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: -webkit-sticky; /* Safari */
+    position: sticky; /* Standard */
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    z-index: 100;
+}
+
+/* Buttons Container */
+.buttons {
+    display: -webkit-flex; /* Safari */
+    display: -moz-flex; /* Firefox */
+    display: -ms-flexbox; /* IE 10+ */
+    display: flex; /* Standard */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-right: 5%;
+    margin-left: auto;
+}
+
+/* Individual Button */
+.button {
+    background: none;
+    color: white;
+    padding: 0.8em 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button Hover Effects */
+.button:hover {
+    background: rgba(116, 116, 116, 0.632);
+    filter: brightness(120%);
+}
+
+/* Logo Styling */
+.logo {
+    height: auto;
+    width: auto;
+    max-height: 2.5rem;
+    max-width: 10rem;
+    object-fit: contain;
+}
+
+/* Hamburger Icon */
+#hamburger {
+    display: none;
+}
+
+/* Close Icon */
+.close_icon {
+    margin: 0.5rem 1rem;
+    font-size: 18pt;
+}
+.close_icon::before {
+    content: "✕";
+    color: white;
+}
+
+/* Horizontal Rule */
+.hr {
+    border: 1px solid rgb(255, 255, 255);
+    background: white;
+    width: 90%;
+    margin:0;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    /* Hamburger Icon */
+    #hamburger {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        color: white;
+        margin: 0.5rem;
+        border-radius: 50%;
+        border: none;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 47.5px;
+        font-size: 30pt;
+        cursor: pointer;
+        z-index: 5;
+        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.8)) drop-shadow(-5px -5px 10px rgba(0, 0, 0, 0.8));
+    }
+    #hamburger::before {
+        content: "☰";
+        color: white;
+    }
+
+    /* Logo Styling for Smaller Screens */
+    .logo {
+        margin-top: 1rem;
+        max-height: 5rem;
+    }
+
+    /* Navbar Styling for Smaller Screens */
+    .navbar {
+        position: fixed;
+        z-index: 10;
+        padding-left: 0;
+        padding: 0;
+        flex-direction: column;
+        max-height: 70vh;
+        overflow-y: scroll;
+    }
+
+    /* Buttons Styling for Smaller Screens */
+    .buttons {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+}

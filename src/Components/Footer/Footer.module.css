@@ -1,41 +1,67 @@
+/* Footer Styles */
 .footer {
     background: rgb(18, 18, 18);
     color: rgb(193, 193, 193);
     padding: 4rem;
 }
 
+/* Footer Logo */
 .footer_logo {
     width: 8%;
     height: auto;
 }
 
+/* Flexbox Utility */
 .flex {
-    display: flex;
-    align-items: center;
+    display: -webkit-flex; /* Safari */
+    display: -moz-flex; /* Firefox */
+    display: -ms-flexbox; /* IE 10+ */
+    display: flex; /* Standard */
+    -webkit-align-items: center; /* Safari */
+    -moz-align-items: center; /* Firefox */
+    -ms-align-items: center; /* IE 10+ */
+    align-items: center; /* Standard */
 }
 
+/* Main Text */
 .main_text {
     margin-left: 0.5rem;
 }
 
+/* Social Media Links */
 .socmed_links {
-    display: flex;
-    flex-wrap: wrap; /* Allow links to wrap onto a new line */
-    justify-content: center; /* Center the items */
-    gap: 5rem; /* Add space between items */
+    display: -webkit-flex; /* Safari */
+    display: -moz-flex; /* Firefox */
+    display: -ms-flexbox; /* IE 10+ */
+    display: flex; /* Standard */
+    -webkit-flex-wrap: wrap; /* Safari */
+    -moz-flex-wrap: wrap; /* Firefox */
+    -ms-flex-wrap: wrap; /* IE 10+ */
+    flex-wrap: wrap; /* Standard */
+    -webkit-justify-content: center; /* Safari */
+    -moz-justify-content: center; /* Firefox */
+    -ms-justify-content: center; /* IE 10+ */
+    justify-content: center; /* Standard */
+    gap: 5rem;
     text-align: center;
 }
 
+/* Social Media Image */
 .socmed_image {
     width: 3rem;
     height: 3rem;
     transition: 0.3s;
 }
 
+/* Hover Effect on Social Media Image */
 .socmed_image:hover {
-    scale: 1.2;
+    -webkit-transform: scale(1.2); /* Safari */
+    -moz-transform: scale(1.2); /* Firefox */
+    -ms-transform: scale(1.2); /* IE 10+ */
+    transform: scale(1.2); /* Standard */
 }
 
+/* Horizontal Rule */
 .hr {
     border: none; /* Remove default border */
     border-top: 1px solid #ccc; /* Light grey color for the top border */
@@ -43,34 +69,43 @@
     margin: 1rem 0; /* Optional margin for spacing */
 }
 
+/* Misc Section */
 .misc {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    -webkit-grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Safari */
+    -moz-grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Firefox */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Standard */
     padding-top: 2rem;
     padding-bottom: 2rem;
     gap: 2rem;
     font-size: 14pt;
-    width:80%;
+    width: 80%;
     margin: auto;
-    justify-items: center;
+    -webkit-justify-items: center; /* Safari */
+    -moz-justify-items: center; /* Firefox */
+    justify-items: center; /* Standard */
     text-align: center;
 }
 
+/* Links without Design */
 .no_design {
     color: inherit;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.no_design:hover{ 
+/* Hover Effect for Links */
+.no_design:hover { 
     color: rgb(255, 213, 76);
 }
 
+/* Last Information */
 .last_info {
-    padding-top:3.5rem;
+    padding-top: 3.5rem;
     text-align: center;
 }
 
+/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .footer {
         padding: 1.5rem;
@@ -80,7 +115,10 @@
         height: auto;
     }
     .flex {
-        flex-direction: column;
+        -webkit-flex-direction: column; /* Safari */
+        -moz-flex-direction: column; /* Firefox */
+        -ms-flex-direction: column; /* IE 10+ */
+        flex-direction: column; /* Standard */
     }
     .socmed_links {
         padding-top: 2rem;
@@ -88,9 +126,11 @@
     }
     .misc {
         width: 90%;
-        grid-template-columns: 1fr 1fr;
+        -webkit-grid-template-columns: 1fr 1fr; /* Safari */
+        -moz-grid-template-columns: 1fr 1fr; /* Firefox */
+        grid-template-columns: 1fr 1fr; /* Standard */
     }
     .last_info {
-        padding-top:1.5rem;
+        padding-top: 1.5rem;
     }
 }

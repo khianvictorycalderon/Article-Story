@@ -1,0 +1,94 @@
+/* Card Section Styles */
+.cardsection {
+    display: -webkit-flex; /* Safari */
+    display: -moz-flex; /* Firefox */
+    display: -ms-flexbox; /* IE 10+ */
+    display: flex; /* Standard */
+    -webkit-flex-wrap: wrap; /* Safari */
+    -moz-flex-wrap: wrap; /* Firefox */
+    -ms-flex-wrap: wrap; /* IE 10+ */
+    flex-wrap: wrap; /* Standard */
+    
+    -webkit-justify-content: center; /* Safari */
+    -moz-justify-content: center; /* Firefox */
+    -ms-justify-content: center; /* IE 10+ */
+    justify-content: center; /* Standard */
+    
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: none;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 12px; /* Rounded edges */
+    overflow: hidden; /* Keeps images within the border */
+    transition: 0.3s;
+    height: 22rem;
+    width: 18rem;
+    display: -webkit-flex; /* Safari */
+    display: -moz-flex; /* Firefox */
+    display: -ms-flexbox; /* IE 10+ */
+    display: flex; /* Standard */
+    
+    -webkit-flex-direction: column; /* Safari */
+    -moz-flex-direction: column; /* Firefox */
+    -ms-flex-direction: column; /* IE 10+ */
+    flex-direction: column; /* Standard */
+    
+    -webkit-align-items: center; /* Safari */
+    -moz-align-items: center; /* Firefox */
+    -ms-align-items: center; /* IE 10+ */
+    align-items: center; /* Standard */
+    
+    text-align: center;
+    z-index: 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.433);
+}
+
+/* Card Hover Styles */
+.card:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px); /* Safari */
+    -moz-transform: translateY(-10px); /* Firefox */
+    -ms-transform: translateY(-10px); /* IE 10+ */
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+/* Card Image Styles */
+.card_image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+}
+
+/* Horizontal Line Styles */
+.card_hr {
+    border: solid 1px rgb(0, 0, 0);
+    background: black;
+    width: 90%;
+    margin: 0;
+}
+
+/* Card Title Styles */
+.card_title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Card Description Styles */
+.card_desc {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    -webkit-box-orient: vertical; /* Safari */
+    -moz-box-orient: vertical; /* Firefox */
+    box-orient: vertical; /* Standard */
+    overflow: hidden;
+    line-height: 1.5;
+    max-width: 90%;
+}

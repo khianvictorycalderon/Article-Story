@@ -7,6 +7,7 @@ interface FooterProps {
     Style?: {
         TextColor?: string;
         Background?: string;
+        HRColor?: string;
     }
     Links?: {
         ImagePath: string;
@@ -60,7 +61,11 @@ export const Footer = ({Title, Logo, Description, Links, MiscLinks, MiscInfo, St
             )}
             {MiscInfo && (
                 <>
-                    <hr className={style.hr}/>
+                    <hr className={style.hr}
+                        style={{
+                            ...(Style?.HRColor ? {borderColor: Style.HRColor} : undefined)
+                        }}
+                    />
                     <div className={style.last_info}>{MiscInfo}</div>
                 </>
             )}
