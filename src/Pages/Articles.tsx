@@ -9,9 +9,9 @@ export const Articles: React.FC<{theme: string}> = ({theme}) => {
                     background: theme === "Light" ? colorWhite1 : colorGrey3,
                     color: theme === "Light" ? colorGrey1 : colorWhite1
                 }}
-            >
-            <h2 className="center">Choose Article</h2>
-            <hr/>
+                >
+                <h2 className="center">Choose Article</h2>
+                <hr/>
             </div>
         </>
     )

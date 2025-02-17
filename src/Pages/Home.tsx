@@ -56,7 +56,7 @@ export const Home: React.FC<{ theme: string }> = ({ theme }) => {
 
       <div id="about-section" />
       <TextSection
-        Title="About Article Story"
+        Title="About"
         Content={
           <>
             Article Story is a static website platform that publishes articles and stories. 
