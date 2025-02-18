@@ -22,7 +22,7 @@ export const colorGrey3 = "#495057";
 export const ArticlesJSONPath = "https://khianvictorycalderon.github.io/Article-Stories-Data/articles.json";
 export const StoriesJSONPath = "https://khianvictorycalderon.github.io/Article-Stories-Data/stories.json";
 
-const testMode = true;
+const testMode = false;
 
 export const slideToID = (id: string): void => {
     const element = document.getElementById(id);
