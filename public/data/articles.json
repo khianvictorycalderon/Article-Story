@@ -1,0 +1,18 @@
+[
+    {
+        "id":"article1",
+        "title": "Sample Article 1",
+        "description":"Sample description, to be display at card only",
+        "author": "<a href='https://khian.netlify.app/'>Monica</a>",
+        "reminder": "<a href='https://khian.netlify.app/'>Automatic</a>",
+        "fullContent": "asfasfsafijasfojoiasf<br/><br/>ijsofusdfhodisuahfaisdjofhufhasiuo"
+    },
+    {
+        "id":"article2",
+        "title": "Sample Article 2",
+        "description":"Sample description, to be display at card only",
+        "author": "asdgsadh",
+        "reminder": "sdhdfhdshsdf",
+        "fullContent": "asfasfsafijasfojoiasfijsofusdfhodisuahfaisdjofhufhasiuo"
+    }
+]

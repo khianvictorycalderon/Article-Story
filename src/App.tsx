@@ -7,6 +7,7 @@ import { Home } from './Pages/Home';
 import { Articles } from './Pages/Articles';
 import { Stories } from './Pages/Stories';
 import { PageNotFound } from './Pages/NotFoundPage';
+import { Content } from './Pages/Content';
 
 // Define color constants
 export const colorWhite1 = "#f8f9fa";
@@ -17,7 +18,10 @@ export const colorGrey1 = "#212529";
 export const colorGrey2 = "#343a40";
 export const colorGrey3 = "#495057";
 
-const testMode = false;
+export const ArticlesJSONPath = "data/articles.json";
+export const StoriesJSONPath = "data/stories.json";
+
+const testMode = true;
 
 export const slideToID = (id: string): void => {
     const element = document.getElementById(id);
@@ -29,6 +33,18 @@ export const slideToID = (id: string): void => {
     } else {
       console.warn(`Element with id "${id}" not found.`);
     }
+};
+
+export const shuffleArray = (arr: string[]): string[] => {
+  // Loop through the array from the end to the beginning
+  for (let i = arr.length - 1; i > 0; i--) {
+    // Generate a random index from 0 to i
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+
+    // Swap the elements at i and randomIndex
+    [arr[i], arr[randomIndex]] = [arr[randomIndex], arr[i]];
+  }
+  return arr;
 };
 
 export default function App() {
@@ -74,6 +90,7 @@ export default function App() {
             <Route path="/" element={<Home theme={theme} />} />
             <Route path="/articles" element={<Articles theme={theme} />} />
             <Route path="/stories" element={<Stories theme={theme} />} />
+            <Route path="/content/:contentID" element={<Content theme={theme} />} />
             <Route path="*" element={<PageNotFound theme={theme} />} />
           </Routes>
           <GeneralFooter theme={theme}/>

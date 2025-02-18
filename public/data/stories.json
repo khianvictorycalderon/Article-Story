@@ -1,0 +1,38 @@
+[
+    {
+        "id":"story1",
+        "title": "Sample Story 1",
+        "description":"Sample description, to be display at card only",
+        "author": "Monica",
+        "reminder": "Automatic",
+        "characters": ["Anita - asf", "asfko - asjifjsai", "asfsaf - saif9isa9"],
+        "fullContent": "asfasfsafijasfojoiasfijsofusdfhodisuahfaisdjofhufhasiuo"
+    },
+	{
+        "id":"anitamona",
+        "title": "Anita Mona",
+        "description":"Sample description, to be display at card only",
+        "author": "Monica",
+        "reminder": "Automatic",
+        "characters": ["Anita - asf", "asfko - asjifjsai", "asfsaf - saif9isa9"],
+        "fullContent": "asfasfsafijasfojoiasfijsofusdfhodisuahfaisdjofhufhasiuo"
+    },
+	{
+        "id":"sukora",
+        "title": "Sukora Salami",
+        "description":"Sample description, to be display at card only",
+        "author": "Monica",
+        "reminder": "Automatic",
+        "characters": ["Anita - asf", "asfko - asjifjsai", "asfsaf - saif9isa9"],
+        "fullContent": "asfasfsafijasfojoiasfijsofusdfhodisuahfaisdjofhufhasiuo"
+    },
+    {
+        "id":"story2",
+        "title": "Sample Story 2",
+        "description":"Sample description, to be display at card only",
+        "author": "asdgsadh",
+        "reminder": "sdhdfhdshsdf",
+        "characters": ["Anita - asf", "asfko - asjifjsai", "asfsaf - saif9isa9"],
+        "fullContent": "asfasfsafijasfojoiasfijsofusdfhodisuahfaisdjofhufhasiuo"
+    }
+]
