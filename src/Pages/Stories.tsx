@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { colorGrey1, colorWhite1, colorGrey2, colorWhite3, colorGrey3, StoriesJSONPath, shuffleArray } from '../App';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 interface StoriesProps {
     id: string;
@@ -93,6 +94,9 @@ export const Stories: React.FC<{ theme: string }> = ({ theme }) => {
                                     window.location.reload(); // for the ads
                                 }}
                             >
+                                <Helmet>
+                                    <title>Choose Story</title>
+                                </Helmet>
                                 <div className="title">
                                     {item.title}
                                 </div>

@@ -13,7 +13,7 @@ export const GeneralFooter: React.FC<{theme: string}> = ({theme}) => (
     MiscInfo={
       <p>
         All rights reserved 2025.<br/>
-        Articles & Stories.
+        Articles & Stories Version 2: February 18, 2025.
       </p>
     }
     Style={{

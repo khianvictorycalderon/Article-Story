@@ -8,6 +8,7 @@ import { Articles } from './Pages/Articles';
 import { Stories } from './Pages/Stories';
 import { PageNotFound } from './Pages/NotFoundPage';
 import { Content } from './Pages/Content';
+import { Helmet } from 'react-helmet-async';
 
 // Define color constants
 export const colorWhite1 = "#f8f9fa";
@@ -18,8 +19,8 @@ export const colorGrey1 = "#212529";
 export const colorGrey2 = "#343a40";
 export const colorGrey3 = "#495057";
 
-export const ArticlesJSONPath = "data/articles.json";
-export const StoriesJSONPath = "data/stories.json";
+export const ArticlesJSONPath = "https://khianvictorycalderon.github.io/Article-Stories-Data/articles.json";
+export const StoriesJSONPath = "https://khianvictorycalderon.github.io/Article-Stories-Data/stories.json";
 
 const testMode = true;
 
@@ -83,6 +84,9 @@ export default function App() {
 
   return (
     <>
+      <Helmet>
+        <title>Articles & Stories</title>
+      </Helmet>
       {(testMode || !isAdBlockerEnabled) ? (
         <Router>
           <GeneralNavBar theme={theme} setTheme={setTheme} />

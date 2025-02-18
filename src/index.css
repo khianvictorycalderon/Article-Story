@@ -100,20 +100,23 @@ body {
 }
 
 .card-section > .card {
-    width: 15rem;
-    min-height: 17rem;
+    width: 20rem;
+    min-height: 20rem;
     border: none;
     background: black;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1.5rem;
+    padding-top: 4rem;
     transition: 0.3s;
     cursor: pointer;
+    box-shadow: 2px 2px 10px black;
 }
 
 .card-section > .card:hover {
     transform: scale(1.1);
     filter:invert(0.1);
+    box-shadow: 2px 2px 10px rgba(47, 47, 47, 0.604);
 }
 
 .card-section > .card > .title {
@@ -131,6 +134,10 @@ body {
 .content-page {
     padding: 4rem;
     min-height: 90vh;
+}
+
+.justify {
+    text-align: justify;
 }
 
 @media (max-width: 768px) {

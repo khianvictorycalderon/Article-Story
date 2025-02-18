@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { colorGrey1, colorWhite1, colorGrey3, ArticlesJSONPath, StoriesJSONPath } from '../App';
 import { useEffect, useState } from 'react';
 import { Ads } from './Ads';
+import { Helmet } from 'react-helmet-async';
 
 export const Content:React.FC<{theme: string}> = ({theme}) => {
 
@@ -80,18 +81,21 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
 
     return (
         <div 
-            className="content-page"
+            className="content-page justify"
             style={{
                 background: theme === "Light" ? colorWhite1 : colorGrey3,
                 color: theme === "Light" ? colorGrey1 : colorWhite1
             }}
             >
+            <Helmet>
+                <title>{title || "Loading..."}</title>
+            </Helmet>
             <h1 className="center">{title}</h1>
             <hr/>
             <b>Written by: </b><u><span dangerouslySetInnerHTML={{__html: author}}/></u><br/>
             {reminder && (
                 <>
-                    <b>Reminder: </b><u><span dangerouslySetInnerHTML={{__html: reminder}}/></u><br/>
+                    <b>Reminder: </b><span dangerouslySetInnerHTML={{__html: reminder}}/><br/>
                 </>
             )}
             {storyCharacters.length > 0 && (
@@ -106,7 +110,7 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
             )}
             <br/>
             <span dangerouslySetInnerHTML={{__html: content}}/>
-            <br/>
+            <br/><br/>
             <Ads/>
         </div>
     );
