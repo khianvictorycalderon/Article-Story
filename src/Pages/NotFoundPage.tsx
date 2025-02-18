@@ -1,4 +1,4 @@
-import { colorGrey1, colorWhite1, colorGrey2, colorWhite2, colorWhite3, colorGrey3 } from '../App';
+import { colorGrey1, colorWhite1, colorGrey2 } from '../App';
 
 export const PageNotFound: React.FC<{theme: string}> = ({theme}) => {
     return (
