@@ -19,8 +19,8 @@ export const colorGrey1 = "#212529";
 export const colorGrey2 = "#343a40";
 export const colorGrey3 = "#495057";
 
-export const ArticlesJSONPath = "https://khianvictorycalderon.github.io/Article-Stories-Data/articles.json";
-export const StoriesJSONPath = "https://khianvictorycalderon.github.io/Article-Stories-Data/stories.json";
+export const ArticlesJSONPath = "https://khianvictorycalderon.github.io/ArticleStory-Data/articles.json";
+export const StoriesJSONPath = "https://khianvictorycalderon.github.io/ArticleStory-Data/stories.json";
 
 const testMode = false;
 
