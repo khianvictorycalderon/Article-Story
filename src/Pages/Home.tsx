@@ -63,7 +63,7 @@ export const Home: React.FC<{ theme: string }> = ({ theme }) => {
             The primary goal of the redesign is to bring new life to the platform, staying true to the developer's original vision: to provide a space where people can share their thoughts and opinions with minimal restrictions. While ArticleStory is not intended to be a source of scientific knowledge, it aims to be a platform for individuals to express themselves, as long as their content complies with our terms and conditions.
             Our new design focuses on simplicity, and we also implemented search bar when you are looking for an article or story. We also created a new logo for our platform, it may be simple but it is our logo.
             <br/><br/>
-            Submit your own story or article <a href="mailto:khianpublicmail@gmail.com?subject=Article%20or%20Story%20Submission">here</a>.
+            Submit your own story or article <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7VpMQuQNcPenFXhh74vxJRcv9YzWpWmg0FLZjMdiRwe5qGQ/viewform?usp=dialog">here</a>.
           </div>          
         }
         Style={{
@@ -99,7 +99,7 @@ export const Home: React.FC<{ theme: string }> = ({ theme }) => {
         Title="Terms and Conditions"
         Content={
           <div className="justify">
-            Last updated: February 18, 2025
+            Last updated: February 20, 2025
             <br/><br/>
             By accessing our website, you agree to comply with and be bound by these Terms and Conditions. We kindly ask that you refrain from using ad blockers while browsing, as our revenue depends on the advertisements displayed.
             <br/><br/>
@@ -137,6 +137,11 @@ export const Home: React.FC<{ theme: string }> = ({ theme }) => {
                 <li>and real-life stories, provided that the names, events, and places are altered to ensure privacy,</li>
                 <li>please note that some stories may or may not be based on real events. If a story is based on real events, names, places, and brands may be changed. Any resemblance to actual persons, events, or locations is purely coincidental.</li>
             </ul>
+            
+            By submitting your content through our forms, you understand that publication is not guaranteed. All submissions undergo a manual review process, and you will be notified once a decision has been made regarding acceptance or decline. By submitting your article or story, you acknowledge and willingly agree that, if published, your contribution is provided voluntarily without any financial compensation. Instead, you will receive recognition as the author.
+            You also grant us a non-exclusive, royalty-free, worldwide license to display, host, and share your content solely on our platform, with appropriate credit given to you as the original author. This license allows us to showcase your work on our platform while ensuring you retain full ownership of your content.
+            Please note that once your article or story is submitted, it cannot be edited or revised. We encourage you to review your work carefully before submission
+            <br/><br/>
 
             Users are fully responsible for the content they post. While our platform moderates content, we do not endorse or take responsibility for user-generated content. We reserve the right to remove content that violates these guidelines.
             <br/><br/>
