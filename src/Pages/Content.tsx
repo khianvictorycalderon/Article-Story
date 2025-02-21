@@ -12,6 +12,7 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
     const [reminder, setReminder] = useState<string>("");
     const [storyCharacters, setStoryCharacters] = useState<string[]>([]);
     const [content, setContent] = useState<string>("");
+    const [datePublished, setDatePublished] = useState<string>("");
     const { contentID } = useParams<{contentID: string}>();
 
     useEffect(() => {
@@ -40,6 +41,7 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
                     foundData = true;
                     setTitle(story.title);
                     setAuthor(story.author);
+                    setDatePublished(story.date);
                     setReminder(story.reminder);
                     setStoryCharacters(story.characters);
                     setContent(story.fullContent);
@@ -59,6 +61,7 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
                     foundData = true;
                     setTitle(article.title);
                     setAuthor(article.author);
+                    setDatePublished(article.date);
                     setReminder(article.reminder);
                     setContent(article.fullContent);
                 }
@@ -73,6 +76,7 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
                 if (!foundData) {
                     setTitle("Unknown Title");
                     setAuthor("Unknown Author");
+                    setDatePublished("Unknown Date")
                     setContent("No content found for this ID.");
                 }
             });
@@ -93,6 +97,7 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
             <h1 className="center">{title}</h1>
             <hr/>
             <b>Written by: </b><u><span dangerouslySetInnerHTML={{__html: author}}/></u><br/>
+            <b>Date Published: </b><u>{datePublished}</u><br/>
             {reminder && (
                 <>
                     <b>Reminder: </b><span dangerouslySetInnerHTML={{__html: reminder}}/><br/>
