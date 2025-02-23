@@ -13,12 +13,7 @@ export const GeneralNavBar: React.FC<{ theme: string, setTheme: React.Dispatch<R
             Label: "Home",
             OnClick: () => {
               navigate("/");
-              setTimeout(() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth"
-                });                
-              }, 100);
+              window.scrollTo({top: 0})
             }
           },
           {
@@ -30,28 +25,22 @@ export const GeneralNavBar: React.FC<{ theme: string, setTheme: React.Dispatch<R
           {
             Label: "About",
             OnClick: () => {
-              navigate("/");
-              setTimeout(() => {
-                slideToID("about-section");
-              }, 100);
+              navigate("/?section=about-section");
+              slideToID("about-section");
             }
           },
           {
             Label: "Privacy Policy",
             OnClick: () => {
-              navigate("/");
-              setTimeout(() => {
-                slideToID("privacy-section");
-              }, 100);
+              navigate("/?section=privacy-section");
+              slideToID("privacy-section");
             }
           },
           {
             Label: "Terms and Conditions",
             OnClick: () => {
-              navigate("/");
-              setTimeout(() => {
-                slideToID("terms-section"); 
-              }, 100);
+              navigate("/?section=terms-section");
+              slideToID("terms-section");
             }
           }
         ]}        

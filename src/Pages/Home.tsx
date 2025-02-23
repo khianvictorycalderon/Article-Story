@@ -1,8 +1,21 @@
 import { TextSection } from '../Components/TextSection/TextSection';
 import { useNavigate } from 'react-router-dom';
 import { colorGrey1, colorWhite1, colorGrey2, colorWhite2, colorWhite3, colorGrey3 } from '../App';
+import { useEffect } from 'react';
+import { slideToID } from '../App';
 
 export const Home: React.FC<{ theme: string }> = ({ theme }) => {
+  
+  // for getting the section id
+  useEffect(() => {
+    const hash = window.location.hash; // Get hash part
+    const queryParams = new URLSearchParams(hash.split("?")[1]); // Extract query params after '?'
+    const value = queryParams.get("section"); // Get 'section' param
+    if (value) {
+        setTimeout(() => slideToID(value), 100);
+    }
+  }, []);
+  
   const navigate = useNavigate();
   return (
     <>
