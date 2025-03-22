@@ -2,7 +2,6 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { GeneralFooter } from './Specific_Components/GeneralFooter';
 import { GeneralNavBar } from './Specific_Components/GeneralNavBar';
-import { AdBlockerMessage } from './Specific_Components/AdBlockerComponent';
 import { Home } from './Pages/Home';
 import { Articles } from './Pages/Articles';
 import { Stories } from './Pages/Stories';
@@ -25,8 +24,6 @@ export const StoriesJSONPath = `${basePath}/stories.json`;
 export const AboutDataPath = `${basePath}/about.dat`;
 export const PrivacyDataPath = `${basePath}/privacy.dat`;
 export const TermsDataPath = `${basePath}/terms.dat`;
-
-const testMode = false;
 
 export const slideToID = (id: string): void => {
     const element = document.getElementById(id);
@@ -53,29 +50,6 @@ export const shuffleArray = (arr: string[]): string[] => {
 };
 
 export default function App() {
-  // Adblocker detector
-  const [isAdBlockerEnabled, setIsAdBlockerEnabled] = useState<boolean>(false);
-  useEffect(() => {
-    const testAdBlocker = () => {
-      const adScript = document.createElement('script');
-      adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
-      adScript.async = true;
-      adScript.onload = () => {
-        setIsAdBlockerEnabled(false);
-      };
-      adScript.onerror = () => {
-        setIsAdBlockerEnabled(true);
-      };
-      document.body.appendChild(adScript);
-      return () => {
-        if (document.body.contains(adScript)) {
-          document.body.removeChild(adScript);
-        }
-      };
-    };
-    testAdBlocker();
-  }, []);
-
   // Initialize the theme state with localStorage value or default to 'Light'
   const [theme, setTheme] = useState<string>(() => {
     return localStorage.getItem("Theme") || "Light";
@@ -91,8 +65,7 @@ export default function App() {
       <Helmet>
         <title>Articles & Stories</title>
       </Helmet>
-      {(testMode || !isAdBlockerEnabled) ? (
-        <Router>
+      <Router>
           <GeneralNavBar theme={theme} setTheme={setTheme} />
           <Routes>
             <Route path="/" element={<Home theme={theme} />} />
@@ -102,10 +75,7 @@ export default function App() {
             <Route path="*" element={<PageNotFound theme={theme} />} />
           </Routes>
           <GeneralFooter theme={theme}/>
-        </Router>
-      ) : (
-        <AdBlockerMessage/>
-      )}
+      </Router>
     </>
   );
 }

@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { colorGrey1, colorWhite1, colorGrey3, ArticlesJSONPath, StoriesJSONPath } from '../App';
 import { useEffect, useState } from 'react';
-import { Ads } from './Ads';
 import { Helmet } from 'react-helmet-async';
 
 export const Content:React.FC<{theme: string}> = ({theme}) => {
@@ -116,7 +115,6 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
             <br/>
             <span dangerouslySetInnerHTML={{__html: content}}/>
             <br/><br/>
-            <Ads/>
         </div>
     );
 }
