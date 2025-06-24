@@ -21,28 +21,34 @@ export const Home: React.FC<{ theme: string }> = ({ theme }) => {
 
   // Fetching the dynamic about content
   useEffect(() => {
-    fetch(AboutDataPath)
+    const cacheBustedAboutPath = `${AboutDataPath}?t=${new Date().getTime()}`;
+
+    fetch(cacheBustedAboutPath)
       .then(data => data.text())
       .then(data => setAbout(data))
-      .catch(error => console.error(`Error fetching: ${error}`))
-  },[])
+      .catch(error => console.error(`Error fetching: ${error}`));
+  }, []);
 
   // Fetching the dynamic privacy content
   useEffect(() => {
-    fetch(PrivacyDataPath)
+    const cacheBustedPrivacyPath = `${PrivacyDataPath}?t=${new Date().getTime()}`;
+
+    fetch(cacheBustedPrivacyPath)
       .then(data => data.text())
       .then(data => setPrivacy(data))
-      .catch(error => console.error(`Error fetching: ${error}`))
-  },[])
+      .catch(error => console.error(`Error fetching: ${error}`));
+  }, []);
 
-  // Fetching the dynamic privacy content
+  // Fetching the dynamic terms content
   useEffect(() => {
-    fetch(TermsDataPath)
+    const cacheBustedTermsPath = `${TermsDataPath}?t=${new Date().getTime()}`;
+
+    fetch(cacheBustedTermsPath)
       .then(data => data.text())
       .then(data => setTerms(data))
-      .catch(error => console.error(`Error fetching: ${error}`))
-  },[])
-  
+      .catch(error => console.error(`Error fetching: ${error}`));
+  }, []);
+
   const navigate = useNavigate();
   return (
     <>

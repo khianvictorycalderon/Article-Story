@@ -16,7 +16,9 @@ export const Articles: React.FC<{ theme: string }> = ({ theme }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(ArticlesJSONPath)
+        const cacheBustedPath = `${ArticlesJSONPath}?t=${new Date().getTime()}`;
+
+        fetch(cacheBustedPath)
             .then(fetchedData => fetchedData.json())
             .then(data => {
                 const shuffledData = shuffleArray(data);
@@ -29,11 +31,11 @@ export const Articles: React.FC<{ theme: string }> = ({ theme }) => {
                 }));
 
                 setArticles(filteredData);
-                setLoading(false); // Set loading to false once data is fetched
+                setLoading(false);
             })
             .catch((e) => {
                 console.error(`Articles JSON load failed: ${e}`);
-                setLoading(false); // Set loading to false if there's an error
+                setLoading(false);
             });
     }, []);
 

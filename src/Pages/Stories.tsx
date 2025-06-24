@@ -16,7 +16,10 @@ export const Stories: React.FC<{ theme: string }> = ({ theme }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(StoriesJSONPath)
+        // Append a timestamp query to bust cache
+        const cacheBustedPath = `${StoriesJSONPath}?t=${new Date().getTime()}`;
+
+        fetch(cacheBustedPath)
             .then(fetchedData => fetchedData.json())
             .then(data => {
                 const shuffledData = shuffleArray(data);

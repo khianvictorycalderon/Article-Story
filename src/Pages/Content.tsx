@@ -31,8 +31,12 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
             return;
         }
 
+        // Generate cache-busted URLs
+        const cacheBustedStoriesPath = `${StoriesJSONPath}?t=${new Date().getTime()}`;
+        const cacheBustedArticlesPath = `${ArticlesJSONPath}?t=${new Date().getTime()}`;
+
         // Fetch stories.json
-        fetch(StoriesJSONPath)
+        fetch(cacheBustedStoriesPath)
             .then(response => response.json())
             .then(data => {
                 const story = data.find((item: { id: string }) => item.id.toLowerCase() === contentID.toLowerCase());
@@ -52,7 +56,7 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
             });
 
         // Fetch articles.json
-        fetch(ArticlesJSONPath)
+        fetch(cacheBustedArticlesPath)
             .then(response => response.json())
             .then(data => {
                 const article = data.find((item: { id: string }) => item.id.toLowerCase() === contentID.toLowerCase());
@@ -70,18 +74,18 @@ export const Content:React.FC<{theme: string}> = ({theme}) => {
                 setContent("Error fetching articles data.");
             })
             .finally(() => {
-                window.scrollTo({top: 0, behavior: "smooth"});
+                window.scrollTo({ top: 0, behavior: "smooth" });
                 // If no data was found in either JSON file
                 if (!foundData) {
                     setTitle("Unknown Title");
                     setAuthor("Unknown Author");
-                    setDatePublished("Unknown Date")
+                    setDatePublished("Unknown Date");
                     setContent("No content found for this ID.");
                 }
             });
 
-    }, [contentID]); // Re-run when contentID changes         
-
+    }, [contentID]); // Re-run when contentID changes
+      
     return (
         <div 
             className="content-page justify"
